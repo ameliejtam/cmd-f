@@ -2,6 +2,11 @@
     "emails": [
         "john.doe@example.com",
         "jane.doe@example.com",
-        "peter.pan@example.com"
+        "peter.pan@example.com",
+        "jane.doe@example.com",
+        "peter.pan@example.com",
+        "jane.doe@example.com",
+        "peter.pan@example.com",
+        "email"
     ]
 }
