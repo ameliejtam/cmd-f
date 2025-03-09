@@ -131,10 +131,26 @@ footer {
     padding: 20px;
 }
 
-footer p {
-    color: #7e6a45;
-    margin: 85px;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: left;
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+li {
+    margin: 10px;
+}
+
+#name {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: auto;
+    font-size: 20px;
+ 
+}
+
+#contact {
+    font-family:  Arial, sans-serif;
+ 
 }
