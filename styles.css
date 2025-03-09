@@ -40,8 +40,11 @@ body {
 
 .intro {
     margin: 50px;
-    padding: 20px;
+    margin-bottom: 200px;
+    padding: 30px;
     text-align: center;
+    font-family: Space Grotesk;
+    font-size: 40px;
 }
 
 input[type="email"] {
