@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <script src="server\getAnswerJson.js"></script>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -27,14 +28,23 @@
             This Week's Climate News
         </h2>
         <p id = "page"></p>
+        <h2 id = "news"></h2>
         <script>
-            fetch("answer.json")
-                .then(response => response.json())
-                .then( data => {
-                    console.log(data.animals)
-                    document.querySelector("#page").innerText = data.animals
-                })
+            // document.getElementById("news").innerText = getNews();
+            // console.log("goat");
+            // console.log(getNews());
+            // document.getElementById("news").innerText = "abcd";
+            // console.log(getNews());
+            // function printStuff() {
+            //     return "strings!!";
+            // }
+            document.getElementById("news").innerText = getNews();
+
         </script>
+        <!-- <button onclick="getNews()">Get News</button> -->
+        <h2>
+            pruple plaites
+        </h2>
     </div>
 </body>
 </html>
