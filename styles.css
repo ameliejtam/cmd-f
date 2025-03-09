@@ -28,10 +28,41 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     aspect-ratio: 1;
-    background-image: url("category-pictures/climate-change.jpg");
     background-size: 100% 100%;
     text-align: center;
     
+}
+
+#c1{
+    background-image: url("category-pictures/climate-change.jpg");
+}
+
+#c2{
+    background-image: url("category-pictures/book.jpg");
+}
+
+#c3{
+    background-image: url("category-pictures/tech.jpg");
+}
+
+#c4{
+    background-image: url("category-pictures/enter.jpeg");
+}
+
+#c5{
+    background-image: url("category-pictures/nat.jpg");
+}
+
+#c6{
+    background-image: url("category-pictures/price-chart-1.jpg");
+}
+
+#c7{
+    background-image: url("category-pictures/resize.jpeg");
+}
+
+#c8{
+    background-image: url("category-pictures/spp.jpg");
 }
 
 .cat-button {
