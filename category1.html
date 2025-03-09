@@ -26,6 +26,15 @@
         <h2>
             This Week's Climate News
         </h2>
+        <p id = "page"></p>
+        <script>
+            fetch("answer.json")
+                .then(response => response.json())
+                .then( data => {
+                    console.log(data.animals)
+                    document.querySelector("#page").innerText = data.animals
+                })
+        </script>
     </div>
 </body>
 </html>
