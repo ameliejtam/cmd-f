@@ -110,7 +110,13 @@ nav {
     background: #ffffff;
     padding: 20px;
     height: 60px
+
 }
+
+#logo {
+    height: 200px;
+}
+
 nav a {
     color: #000000;
     margin: 15px; 
