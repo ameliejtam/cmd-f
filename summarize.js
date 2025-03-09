@@ -8,7 +8,7 @@ const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-const prompt = `Summarize three recent climate events using this JSON schema:
+const prompt = `Summarize three recent climate events using this schema: Return: Array<string>`;
 
 Info = {'climateNews': string}
 Return: Array<Info>`;
@@ -18,9 +18,8 @@ Return: Array<Info>`;
     const result = await model.generateContent(prompt); 
     const response = result.response.text(); 
     console.log(response);  
-
-    fs.writeFileSync('answer.json', JSON.stringify(response, null, 4));  // Save the response as JSON
-
+    const responseObject = { climateNews: response };
+    fs.writeFileSync('answer.json', JSON.stringify(responseObject, null, 4)); 
     console.log("Response saved to answer.json");
 
 
