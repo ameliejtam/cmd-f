@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <script src="server\getAnswerJson.js"></script>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -20,7 +19,7 @@
         <h2>Subscribe to our Newsletter</h2>
         <p>Stay updated with the latest climate news.</p>
         <input type="email" placeholder="Enter your email" required>
-        <button>Subscribe</button>
+        <button id="loadData">Subscribe</button>
     </div> 
 
     <div class="heading1">
@@ -28,14 +27,26 @@
             This Week's Climate News
         </h2>
         <p id = "page"></p>
-        <h2 id = "news"></h2>
+        <p id="output"></p> 
+    
         <script>
-            document.getElementById("news").innerText = getNews();
+            async function fetchData() {
+                try {
+                    const response = await fetch('server/answer.json'); 
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    const data = await response.json(); 
+                    console.log(data);  
+    
+                    document.getElementById('output').textContent = data.colours + data.animals;
+                } catch (error) {
+                    console.error('Error:', error);
+                    document.getElementById('output').textContent = `Error: ${error.message}`;
+                }
+            }
+            document.getElementById('loadData').addEventListener('click', fetchData);
         </script>
-        <!-- <button onclick="getNews()">Get News</button> -->
-        <h2>
-            pruple plaites
-        </h2>
     </div>
 </body>
 </html>

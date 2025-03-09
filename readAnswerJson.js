@@ -14,4 +14,6 @@ fs.readFile("answer.json", (error, data) => {
     const info = JSON.parse(data);
   
     console.log(info);
+
+    return "random string";
 });
