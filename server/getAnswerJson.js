@@ -1,3 +1,0 @@
-function getNews() {
-    return "STRINGGGG";
-}

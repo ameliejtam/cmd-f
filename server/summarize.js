@@ -17,7 +17,7 @@ const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-const prompt = [`Name one random colours`, 'Name one random animal'];
+const prompt = [`Name one recent climate event`, 'Name one ongoing climate crisis'];
 const properties = ["colours", "animals"];
 
 (async () => {
