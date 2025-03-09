@@ -20,8 +20,6 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 const prompt = [`Name one random colours`, 'Name one random animal'];
 const properties = ["colours", "animals"];
 
-console.log("yellow orange");
-
 (async () => {
   try {
     var jsonObject = {};
