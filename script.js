@@ -1,24 +1,27 @@
-// console.log("email test");
+let emailList = [];
 
-// function getInputValueToJson() {
-//     // Get the input field value
-//     let inputValue = document.getElementById("userInput").value;
-//     document.getElementById("output").innerText = "Entered Value: " + inputValue;
-//     let jsonData = { "input": inputValue };
+function addInputValue() {
+    // Get the input field value
+    let inputValue = document.getElementById("userInput").value;
+    //document.getElementById("output").innerText = "Entered Value: " + inputValue;
 
-//     // Send data to backend via Fetch API
-//      fetch('/save', {
-//           method: 'POST',
-//           headers: { 'Content-Type': 'application/json' },
-//           body: JSON.stringify(jsonData)
-//      }).then(response => response.json())
-//          .then(data => document.getElementById("output").innerText = data.message)
-//          .catch(error => console.error("Error:", error));
+    if (inputValue !== "") {
+        emailList.push(inputValue); // Add value to array
+        //updateList(); // Update the displayed list
+        inputValue.value = " "; // Clear input field
+    }
 
-//     // Log to console
-//     console.log(inputValue);
-// }
-
-function getNews() {
-    return "goats";
+    document.getElementById("userInput").value = "";
+    console.log(emailList);
 }
+
+function showJSON() {
+    let jsonString = JSON.stringify(emailList, null, 2); // Convert to JSON format
+    console.log(jsonString); // Log JSON string
+    alert(jsonString); // Show JSON in an alert (optional)
+}
+
+
+
+
+console.log(emailList);
